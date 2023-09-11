@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(125, 125, 125, .4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-bottom: 2px solid #f00;
+    box-shadow: 0 0 12px 6px #444;
+}
+
+header h2 {
+    font-size: 27px;
+    color: #f00;
+}
+
+nav li {
+    position: relative;
+    display: inline;
+    list-style: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+nav i {
+    display: none;
+}
+
+nav a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: .7px;
+}
+
+nav a:hover {
+    color: red;
+}
+
+nav button {
+    width: 90px;
+    height: 35px;
+    background: transparent;
+    border: 2px solid #f00;
+    border-radius: 9px;
+    box-shadow: 0 0 8px 1px #fff;
+    outline: none;
+    font-size: 16px;
+    color: #f00;
+    font-weight: bold;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background: #f00;
+    border: none;
+    color: #fff;
+}
+
+.wrapper {
+    position: relative;
+    width: 350px;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(125, 125, 125, .4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 2px solid #f00;
+    border-radius: 20px;
+    box-shadow: 0 0 12px 6px #666;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .3s ease;
+}
+
+.popup {
+    transform: scale(1);
+}
+
+.active {
+    height: 450px;
+}
+
+.form {
+    width: 100%;
+    padding: 20px;
+}
+
+.wrapper .sign-in {
+    transition: transform .2s ease;
+    transform: translateX(0);
+}
+
+.active .sign-in {
+    transform: none;
+    transform: translateX(-450px);
+}
+
+.wrapper .sign-up {
+    position: absolute;
+    transition: none;
+    transform: translateX(450px);
+}
+
+.active .sign-up {
+    transition: transform .2s ease;
+    transform: translateX(0);
+}
+
+.wrapper .bi-x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    font-weight: bold;
+    font-size: 35px;
+    color: #0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form h2 {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+}
+
+.input {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin: 20px 0;
+}
+
+.input input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #0f0;
+    border-radius: 12px;
+    outline: none;
+    background: transparent;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.input span {
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 21px;
+    color: #f00;
+}
+
+.input input:focus+span,
+.input input:valid~span {
+    top: -17px;
+    transform: rotate(360deg);
+    color: #f00;
+}
+
+.condition {
+    font-size: 13px;
+    font-weight: bold;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.condition input {
+    accent-color: #0f0;
+    font-size: 15px;
+    margin: 5px 4px 0 4px;
+    transition: .5s;
+}
+
+.condition input:hover {
+    transform: scale(1.4);
+}
+
+.condition a {
+    color: #f20;
+    text-decoration: none;
+}
+
+.form button {
+    width: 100%;
+    height: 45px;
+    background: #03f;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.form button {
+    background: #00f;
+}
+
+.sign-link {
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+.sign-link a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    color: #f00;
+}
+
+.sign-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 580px) {
+    nav i {
+        display: inline-block;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    nav i:hover {
+        color: red;
+    }
+
+    nav a {
+        display: none;
+    }
+}

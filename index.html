@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebLogin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <h2>Logict</h2>
+        <nav>
+            <li>
+                <i class="bi bi-house-fill"></i>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <i class="bi bi-journal-text"></i>
+                <a href="#">Courses</a>
+            </li>
+            <li>
+                <i class="bi bi-list-task"></i>
+                <a href="#">Activities</a>
+            </li>
+            <li>
+                <i class="bi bi-file-person"></i>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <i class="bi bi-person-lines-fill"></i>
+                <a href="#">Contact</a>
+            </li>
+            <button>Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <i class="bi bi-x" id="close"></i>
+
+        <div class="form sign-in">
+            <h2>Login</h2>
+            <form>
+                <div class="input">
+                    <i class="bi bi-envelope-fill"></i>
+                    <input type="mail" required>
+                    <span id="mail">Email</span>
+                </div>
+                <div class="input">
+                    <i class="bi bi-lock-fill"></i>
+                    <input type="password" required>
+                    <span id="password">Password</span>
+                </div>
+                <div class="condition">
+                    <span>
+                        <input type="checkbox">Remember me
+                    </span>
+                    <a href="#">Forgot password</a>
+                </div>
+                <button type="submit">Sign in</button>
+                <div class="sign-link">
+                    <span>Don't have an account
+                        <a href="#" id="sign-up">Sign up</a>
+                    </span>
+                </div>
+            </form>
+        </div>
+
+        <div class="form sign-up">
+            <h2>Legister</h2>
+            <form>
+                <div class="input">
+                    <i class="bi bi-person-fill"></i>
+                    <input type="text" required>
+                    <span id="name">Name</span>
+                </div>
+                <div class="input">
+                    <i class="bi bi-person-circle"></i>
+                    <input type="text" required>
+                    <span id="username">Username</span>
+                </div>
+                <div class="input">
+                    <i class="bi bi-envelope-fill"></i>
+                    <input type="mail" required>
+                    <span id="mail">Email</span>
+                </div>
+                <div class="input">
+                    <i class="bi bi-lock-fill"></i>
+                    <input type="password" required>
+                    <span id="password">Password</span>
+                </div>
+                <div class="condition">
+                    <span>
+                        <input type="checkbox">I agree to the terms & conditions
+                    </span>
+                </div>
+                <button type="submit">Sign up</button>
+                <div class="sign-link">
+                    <span>Already have an account?
+                        <a href="#" id="sign-in">Sign in</a>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
